@@ -3,9 +3,7 @@ lock "~> 3.19.1"
 
 set :application, "hello-rails"
 set :repo_url, "git@github.com:i9or/hello-rails.git"
-
-# Default branch is :master
-ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+set :branch, "main"
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/home/deploy/#{fetch :application}"
